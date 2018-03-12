@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+          integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+</head>
+<body class="pure-form pure-form-aligned">
+<div id="error"></div>
+<div class="back"></div>
+<header>
+    <i class="header-logo fas fa-fire fa-6x"></i>
+</header>
+<section class="search">
+    <div class="input_search input_form">
+        <form>
+            <input id="search_input" class="pure-input-rounded input_add--medium" title="Wyszukaj miasto" placeholder="Wyszukaj"
+                   type="text">
+            <button id="search" class="pure-button" type="button"><i class="fas fa-search fa-sm"></i></button>
+        </form>
+    </div>
+</section>
+<section class="select">
+    <select id="select" class="pure-input-rounded">
+        <option class="option" value="city_input">Dodaj miasto</option>
+        <option class="option" value="road_input">Dodaj droge</option>
+        <option class="option" value="maxTime_input">Zmień maksymalny czas przejazdu</option>
+    </select>
+</section>
+<section class="input">
+    <div class="input_form">
+        <div id="city_input" class="option_form">
+            <form id="city_form">
+            <input id="city" title="Podaj nazwę miasta." class="pure-input-rounded input_add--medium" placeholder="Miasto"
+                   type="text" minlength="4" required>
+            SP?      <input id="hasFs" class="input_checkbox--big" title="Podaj czy miasto posiada własną jednostkę straży pożarnej." type="checkbox" required>
+            <button class="add_city pure-button" type="button"><i class="fas fa-plus fa-sm"></i></button>
+            </form>
+        </div>
+        <div id="road_input" class="option_form option_form--hidden">
+            <form id="road_form">
+            <input id="city1" title="Podaj nazwę pierwszego miasta." class="pure-input-rounded input_form-button--medium"
+                   placeholder="Nazwa miasta" type="text" minlength="4" required>
+            <i class="fas fa-exchange-alt fa-sm"></i>
+            <input id="city2" title="Podaj nazwę drugiego miasta." class="pure-input-rounded input_form-button--medium"
+                   placeholder="Nazwa miasta" type="text" minlength="4" required>
+            <input id="time" title="Podaj czas przejazdu z miasta do miasta." class="pure-input-rounded input_form-button--small" placeholder="0"
+                   type="number" min="0" required>
+            <button class="add_road pure-button" type="button"><i class="fas fa-plus fa-sm"></i></button>
+            </form>
+        </div>
+        <div id="maxTime_input" class="option_form option_form--hidden">
+            <form id="maxTime_form">
+            <input id="maxTime" title="Podaj maksymalny czas przejazdu pomiedzy miastami." class="pure-input-rounded input_form-button--small"
+                   placeholder="0" type="number" min="0" required>
+            <button class="add_maxTime pure-button" type="button"><i class="fas fa-plus fa-sm"></i></button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="content">
+    <table class="city-list" style="max-width: 490px">
+        <thead>
+            <tr>
+                <th><span class="city-list_head--start">Nazwa miasta</span></th>
+                <th><span class="city-list_head--middle">Straż pożarna?</span></th>
+                <th><span class="city-list_head--middle">Ilość połączeń</span></th>
+                <th><span class="city-list_head--end"></span></th>
+            </tr>
+        </thead>
+    </table>
+</section>
+<script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-validation/dist/jquery.validate.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>

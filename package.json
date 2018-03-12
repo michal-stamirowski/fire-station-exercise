@@ -1,0 +1,19 @@
+{
+  "name": "relayr_test",
+  "version": "1.0.0",
+  "description": "Relayr recruitment test",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Michał Stamirowski",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jquery": "^3.3.1",
+    "jquery-validation": "^1.17.0"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
+}

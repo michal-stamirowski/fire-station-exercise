@@ -1,0 +1,232 @@
+@media only screen {
+
+    body {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 500px) {
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        margin: 0px 0px 0px 0px;
+        display: grid;
+        grid-template-columns: [content-start] auto [content-end];
+        grid-template-rows: [row1] 110px [row2] 36px [row3] 36px [row4] auto [row5] auto [row6];
+        grid-row-gap: 20px;
+        justify-items: center;
+        min-height: 100%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        margin: 0px 0px 0px 0px;
+        display: grid;
+        grid-template-columns: [left_margin] auto [content-start] 500px [content-end] auto [right_margin];
+        grid-template-rows: [top_margin] 5% [row1] 110px [row2] 36px [row3] 36px [row4] auto [row5] auto [row6];
+        grid-row-gap: 20px;
+        justify-items: center;
+        min-height: 100%;
+    }
+
+}
+
+.back {
+    grid-area: row1 / content-start / row6 / content-end;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    background-color: lightgrey;
+    width: 100%;
+    height: 100%;
+}
+
+
+#error {
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+    grid-row-start: top_margin;
+    grid-row-end: row1;
+    background-color: red;
+}
+
+header {
+    padding-top: 10px;
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+    grid-row-start: row1;
+    grid-row-end: row2;
+}
+
+.header-logo {
+    height: 100px;
+    color: red;
+}
+
+.search {
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+    grid-row-start: row2;
+    grid-row-end: row3;
+}
+
+.select {
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+    grid-row-start: row3;
+    grid-row-end: row4;
+    text-align: center
+}
+
+.input {
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+    grid-row-start: row4;
+    grid-row-end: row5;
+    text-align: center
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.input_checkbox--big {
+    width: 35px;
+    height: 35px;
+}
+
+.input_form-button--medium {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.input_form-button--small {
+    width: 100px;
+}
+
+.content {
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+    grid-row-start: row5;
+    grid-row-end: row6;
+}
+
+.content button {
+    justify-self: end;
+}
+
+.city-list_head--start {
+    height: 20px;
+    border-radius: 10px 0px 0px 0px;
+    border: 1px solid #a7a7a7;
+    box-shadow: inset 0 1px 3px #ddd;
+}
+
+.city-list_head--middle {
+    height: 20px;
+    border-radius: 0px 0px 0px 0px;
+    border: 1px solid #a7a7a7;
+    box-shadow: inset 0 1px 3px #ddd;
+}
+
+.city-list_head--end {
+    height: 20px;
+    border-radius: 0px 10px 0px 0px;
+    border: 1px solid #a7a7a7;
+    box-shadow: inset 0 1px 3px #ddd;
+    padding-left: 88px
+}
+
+.city-list_element, .city-list thead, .road-list_element, .road-list thead  {
+    min-height: 34px;
+}
+
+.city-list {
+    max-width: 600px;
+}
+
+tr {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+td {
+    text-align: center;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+th span {
+    padding: 5px 3px 0px 3px;
+}
+
+th {
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.city-list_element_field--lg {
+    min-width: 300px;
+}
+.city-list_element_field--med {
+    min-width: 100px;
+}
+.city-list_element_field--sm {
+    min-width: 50px;
+}
+
+.city-list_element--spacer {
+    height: 20px
+}
+
+.city-list_element--green {
+    background-color: lightgreen;
+}
+
+.city-list_element--blue {
+    background-color: lightblue;
+}
+
+.city-list_element--red {
+    background-color: lightcoral;
+}
+
+.road-list-container--hidden {
+    display: none;
+}
+
+.road-list--background {
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid #a7a7a7;
+    box-shadow: inset 0 1px 3px #ddd;}
+
+.btn--event-none {
+    pointer-events: none;
+}
+
+.option_form--hidden {
+    display: none;
+}
+
+.input .pure-button, .search .pure-button {
+    border-radius: 20px 20px 20px 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
