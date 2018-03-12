@@ -1,4 +1,4 @@
-# Relayr ui fire station test 
+# Front-end ui fire station test 
 
 
 ## Prerequisites:
@@ -38,4 +38,4 @@ The search tool points you in the right direction, revealing the dropdown of mat
 
 ## Author
 
-### Micha³ Stamirowski 2018
+### MichaÂ³ Stamirowski 2018
